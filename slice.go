@@ -110,4 +110,17 @@ func sortSlice(sl interface{}) {
 		})
 	}
 }
+
+// Multiple Struct Fields:
+
+	sort.Slice(topicMeta, func(i, j int) bool {
+		if topicMeta[i].Topic < topicMeta[j].Topic {
+			return true
+		}
+		if topicMeta[i].Topic > topicMeta[j].Topic {
+			return false
+		}
+		return topicMeta[i].Partition < topicMeta[j].Partition
+	})
+
 */
