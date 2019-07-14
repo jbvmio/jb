@@ -5,6 +5,7 @@ import (
 	"github.com/tidwall/pretty"
 )
 
+// GJsonKeepRaw .
 func GJsonKeepRaw(json []byte, path string) []byte {
 	var raw []byte
 	r := gjson.GetBytes(json, path)
@@ -16,6 +17,7 @@ func GJsonKeepRaw(json []byte, path string) []byte {
 	return raw
 }
 
-func JsonPretty(json []byte) []byte {
+// JSONPretty .
+func JSONPretty(json []byte) []byte {
 	return pretty.Pretty(json)
 }
